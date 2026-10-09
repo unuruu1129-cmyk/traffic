@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.traffic-light {
+  height: 910px;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(35, 34, 34);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  /* --duration: 6s; */
+}
+.top {
+  border: 1px red solid;
+  border-radius: 20px;
+  height: 290px;
+  width: 290px;
+  box-shadow: 0 0 20px red;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid {
+  border: 1px yellow solid;
+  border-radius: 20px;
+  height: 290px;
+  width: 290px;
+  box-shadow: 0 0 20px yellow;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.down {
+  border: 1px greenyellow solid;
+  border-radius: 20px;
+  height: 290px;
+  width: 290px;
+  box-shadow: 0 0 20px green;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hum {
+  height: 150px;
+  width: 150px;
+  mask: url("./human-clean.png") center / contain no-repeat;
+  background-color: green;
+}
+.red {
+    transform: translateY(600px);
+    background-color: red;
+    animation: rede 6s linear infinite;
+}
+.yel {
+    transform: translateY(300px);
+    background-color: yellow;
+    animation: yello 6s linear infinite;
+}
+.gre {
+    animation: gree 6s linear infinite;
+}
+@keyframes rede {
+    0%{
+        transform: translateY(600px);
+    }
+  
+    50% {
+        transform: translateY(0);
+    }
+}
+@keyframes yello {
+    0%{
+        transform: translateY(300px);
+    }
+  
+    50% {
+        transform: translateY(-300px);
+    }
+}
+@keyframes gree {
+    0%{
+        transform: translateY(0px);
+    }
+  
+    50% {
+        transform: translateY(-600px);
+    }
+}
